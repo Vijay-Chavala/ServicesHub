@@ -1,0 +1,710 @@
+<style>
+   
+input[type="radio"], input[type="checkbox"]
+{
+    opacity: 0;
+    display: inline-block;
+    margin-left:3.5px;
+    z-index: 1
+    
+}
+input[type="checkbox"], .dropdown-menu input[type="radio"], .dropdown-menu li label::before, .form-check input[type="checkbox"], .form-check .form-check-label::before
+{  
+    content: "";
+    cursor: pointer;
+    height: 30px;
+    left: 0;
+    margin-top: -15px;
+    position: absolute;
+    width: 30px;
+    top: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+.subcategories ul :hover
+{
+background-color:#00eec0;
+    cursor: pointer;
+}
+
+li input[type="checkbox"]:checked +label::before, .form-check input[type="checkbox"]:checked +.form-check-label::before
+{
+    border: 1px solid #ccc;
+    content: '\2713';
+    color: #39a77b;
+    position: absolute;
+    line-height: 10px;
+
+}
+.dropdown-menu li label::before, .form-check .form-check-label::before
+{
+    color: #fff;
+    font-size: 2.0em;
+    padding: 0 0 0 .2em;
+}
+.form-check label
+{
+    margin-left: 15px;
+    display: block;   
+    width: 80%;
+    word-wrap: break-word;
+    border-right: 1px solid #ddd
+}
+.greenbgcolor
+{
+background-color:#00eec0
+}
+
+.form-check span
+{
+    margin-top: -24px;
+    width: 15%;
+    line-height: 24px;
+    padding-left: 10px;
+
+}
+    
+.btn-gradient-dark, .btn-gradient-dark:hover {
+    font-size: 1.1rem;
+    background-image: linear-gradient(#8c8c8c, #383838);
+    color: #fff;
+    transition-duration: 0.3s !important;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+    
+    
+@media screen and (max-width:600px)
+{
+    
+    .modal-content .btn-gradient,.modal-content .btn-gradient-dark
+    {
+        padding: 5px 15px !important;
+        margin-top: 10px !important;
+        margin-right: 10%!important
+    }
+    }
+</style>
+
+
+
+        <!-- recommended services subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="recommended-services-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="salon-at-home">
+                                                    <label class="form-check-label" for="salon-at-home">Salon at Home for Women</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="ac-repair-service">
+                                                    <label class="form-check-label" for="ac-repair-service">AC Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="home-deep-cleaning">
+                                                    <label class="form-check-label" for="home-deep-cleaning">Home Deep Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="ca-recom">
+                                                    <label class="form-check-label" for="ca-recom">Chartered Accountant</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="pest-control">
+                                                    <label class="form-check-label" for="pest-control">Pest-Control</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="car-wash">
+                                                    <label class="form-check-label" for="car-wash">Car Wash Service</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of recommended services subcategories-->
+
+        
+
+        <!--appliance repair subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="appliance-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="washing-machine">
+                                                    <label class="form-check-label" for="washing-machine">Washing Machine Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="ac-repair">
+                                                    <label class="form-check-label" for="ac-repair">AC Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="refrig">
+                                                    <label class="form-check-label" for="refrig">Refrigerator Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                              
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="micro-wave-repair">
+                                                    <label class="form-check-label" for="micro-wave-repair">Micro Wave Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="laptop-repair">
+                                                    <label class="form-check-label" for="laptop-repair">Laptop Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+</div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of appliance repair subcategories-->
+
+
+
+
+        <!-- Home cleaning subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="homecleaning-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="sofacleaning">
+                                                    <label class="form-check-label" for="sofacleaning">Sofa Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="bathroomcleaning">
+                                                    <label class="form-check-label" for="bathroomcleaning">Bathroom Deep Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="homedeepcleaning">
+                                                    <label class="form-check-label" for="homedeepcleaning">Home Deep Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="kitchencleaning">
+                                                    <label class="form-check-label" for="kitchencleaning">Kitchen Deep Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="carpetcleaning">
+                                                    <label class="form-check-label" for="carpetcleaning">Carpet Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="laptopRepair">
+                                                    <label class="form-check-label" for="laptopRepair">Laptop Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of home cleaning subcategories-->
+
+
+
+        
+        <!-- shiftinghomes cleaning subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="shifting-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="packers-movers">
+                                                    <label class="form-check-label" for="packers-movers">Packers & Movers</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="house-painting">
+                                                    <label class="form-check-label" for="house-painting">House Painters</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="pest-control1">
+                                                    <label class="form-check-label" for="pest-control1">Pest Control</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="electrician">
+                                                    <label class="form-check-label" for="electrician">Electrician</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="carpenter">
+                                                    <label class="form-check-label" for="carpenter">Carpenter</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of shifting homes subcategories-->
+        
+        
+        
+        
+        <!-- wedding subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="wedding-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="party-makeup">
+                                                    <label class="form-check-label" for="party-makeup">Party Makeup & Hair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="mehendi-artists">
+                                                    <label class="form-check-label" for="mehendi-artists">Mehendi Arists</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="wedding-photographer">
+                                                    <label class="form-check-label" for="wedding-photographer">Wedding Photographer</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="pre-wedd-shoot">
+                                                    <label class="form-check-label" for="pre-wedd-shoot">Pre Wedding Shoot</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="wedding-venue">
+                                                    <label class="form-check-label" for="wedding-venue">Wedding Venue</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="wedding-catering">
+                                                    <label class="form-check-label" for="wedding-catering">Wedding Catering</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of wedding services subcategories-->
+
+        
+
+        
+        <!-- Business  subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="business-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="chartered-accountant">
+                                                    <label class="form-check-label" for="chartered-accountant">Chartered Accountant</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="web-developer">
+                                                    <label class="form-check-label" for="web-developer">Web Developer</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="tax-filing">
+                                                    <label class="form-check-label" for="tax-filing">CA for Income Tax Filing</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="banking">
+                                                    <label class="form-check-label" for="banking">Banking</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="cctv-installation">
+                                                    <label class="form-check-label" for="cctv-installation">CCTV Cameras and Installation</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of business subcategories-->
+
+        
+

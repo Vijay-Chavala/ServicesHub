@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>#Services Hub#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.css">
+    <link rel="stylesheet" href="../css/style1.css">
+
+
+<style>
+    .show {
+    display: block !important;
+}
+
+
+
+.signup .form-control {
+    padding: 5px;
+}
+
+
+
+.signup .container .form-col {
+    padding-right: 10% !important
+}
+
+.signup .box {
+    padding-top: 25px !important;
+    height: 35px;
+}
+
+select {
+    padding-right: 70px !important;
+}
+
+
+@media screen and (max-width:1200px) {
+
+    .signup .container .form-col {
+        padding-right: 5% !important
+    }
+
+}
+
+@media screen and (max-width:991px) {
+
+    .signup .col-md-12 {
+        border: none !important
+    }
+
+}
+
+
+@media screen and (max-width:991px) and (min-width:768px) {
+
+
+
+
+
+    .signup .row {
+        padding-left: 80px !important;
+        padding-right: 80px !important
+    }
+
+    .signup-with .container {
+        padding: 0 30px !important;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:767px) {
+    .signup .d-flex {
+        justify-content: space-around !important;
+    }
+
+    .signup .d-flex .form-group:first-child {
+        margin-right: 20px
+    }
+
+    .signup-with .container {
+        padding: 0 30px !important;
+    }
+
+    .signup .box {
+        padding-top: 18px !important;
+    }
+
+}
+
+
+@media screen and (max-width:434px) {
+
+    .signup .col-md-12 {
+        padding: 0 20px !important
+    }
+
+    .signup .d-flex {
+        display: block !important
+    }
+
+    .signup-with .container {
+        padding: 0 !important;
+    }
+
+    .signup .signup-with .form-control {
+        padding: 0px !important;
+    }
+
+    .signup .box {
+        padding: 0px !important;
+        margin-top: 20px !important
+    }
+
+}
+    
+    
+    
+    </style>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-header navbar-expand-lg navbar-dark bg-dark nav-bgcolor">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><span class="dblue">Services</span>Hub</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">LOGIN/SIGN UP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-color" href="#">BECOME A PROFESSIONAL</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header border-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-5 pb-5">
+                    <div class="container">
+                        <h5 class="modal-title">LOG IN</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <form class=" border-right pr-4">
+                                    <div class="form-group mb-0">
+                                        <label for="recipient-name" class="col-form-label">E-mail or username:</label>
+                                        <input type="text" class="form-control h-25" id="user-name">
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <label for="message-text" class="col-form-label">Password:</label>
+                                        <div class="input-group">
+
+                                            <input type="password" class=" form-control h-25 border-right-0" id="password">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text bg-white border-left-0 " id="eye-icon">
+                                                    <span class="fas fa-eye-slash" id="eye"></span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right pt-1">
+                                    <small><a href="#" class="password-req">I forgot my password </a></small>
+
+                                </div>
+                                    <div class="form-group">
+                                        <input type="checkbox">
+                                        I Forget my password
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Log In" class="btn btn-gradient w-100 mt-4 btn-hover-black">
+                                    </div>
+
+                                </form>
+                                <div class="text-center pt-2"><small>Do not have an account yet? <a href="signup.html">Sign Up</a></small></div>
+
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 social mt-4">
+                                <h6>Other Alternatives:</h6>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text fb">
+                                            <i class="fab fa-facebook-f mx-1"></i>
+                                        </div>
+                                    </div>
+                                    <input type="button" class="form-control facebook-btn " value="Log in with your account">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text google">
+                                            <!--<i class="fab fa-google"></i>-->
+                                            <img src="../img1/google_g_logo.png" class="img-fluid" width="20px" height="20px" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="button" class="form-control google-btn" value="Log in with Google">
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="password-sec d-none col-lg-8 col-md-12 col-sm-12 mx-auto mt-5">
+                        <div class="container">
+                            <div class="content">
+                                <p>Enter an email address to which to send your username and instructions to make the password change.</p>
+                                 <div class="form-group mb-0">
+                                    <label for="recipient-name" class="col-form-label">E-mail or username:</label>
+                                    <input type="text" class="form-control h-25" id="user-name">
+                                </div>
+                                  <div class="form-group">
+                                    <input type="submit" value="Request new password" class="btn btn-gradient w-100 mt-4 btn-hover-black">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="signup">
+
+
+        <div class="py-5 signup-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 px-5 border-right form-col">
+                        <form action="">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="form-group mb-0">
+                                    <label for="recipient-name" class="col-form-label">First name:</label>
+                                    <input type="text" class="form-control h-25" id="user-name">
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label for="recipient-name" class="col-form-label">Surname:</label>
+                                    <input type="text" class="form-control h-25" id="user-name">
+                                </div>
+                            </div>
+                            <div class="form-group mb-0">
+                                <label for="recipient-name" class="col-form-label">E-mail Address:</label>
+                                <input type="text" class="form-control h-25" id="user-name">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="form-group mb-0">
+                                    <label for="recipient-name" class="col-form-label">Phone number:</label><br>
+                                    <select class="btn border w-100">
+                                        <option value="VISA">VISA</option>
+                                        <option value="MasterCard">MasterCard</option>
+
+
+                                    </select>
+                                </div>
+                                <div class="form-group box">
+
+                                    <input type="text" class="form-control" id="user-name">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="form-group mb-0">
+                                    <label for="recipient-name" class="col-form-label">Password:</label>
+                                    <input type="password" class="form-control h-25" id="user-name">
+                                </div>
+                                <div class="form-group mb-0">
+                                    <label for="recipient-name" class="col-form-label">Confirm the password:</label>
+                                    <input type="password" class="form-control h-25" id="user-name">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <input type="checkbox"> I accept the <a href="">Terms of use</a> and the <a href=""> privacy policy</a></div>
+                            <div class="form-group">
+                                <input type="submit" value="Verify My Number" class="btn btn-gradient w-100 mt-4 btn-hover-black">
+                            </div>
+                        </form>
+
+
+
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 signup-with social mt-4">
+                        <div class="container px-5">
+                            <h6>Sign up with your email</h6>
+                            <p>Access to Services Hub is restricted. To join you need an email address that is valid in this community.</p>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text fb">
+                                        <i class="fab fa-facebook-f mx-1"></i>
+                                    </div>
+                                </div>
+                                <input type="button" class="form-control facebook-btn " value="Log in with your account">
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text google">
+                                        <!--<i class="fab fa-google"></i>-->
+                                        <img src="google_g_logo.png" class="img-fluid" width="20px" height="20px" alt="">
+                                    </div>
+                                </div>
+                                <input type="button" class="form-control google-btn" value="Log in with Google">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+
+
+            $('#eye-icon').hover(function() {
+                $('#eye').toggleClass("fa-eye-slash fa-eye");
+
+                var pass = $('#password');
+                if (pass.attr('type') === "password") {
+                    pass.attr('type', 'text');
+                } else {
+
+                    pass.attr('type', 'password');
+                }
+
+            });
+               
+    $('.password-req').click(function(){
+       $('.password-sec').toggleClass('show'); 
+    });  
+
+        });
+    </script>
+</body>
+
+</html>

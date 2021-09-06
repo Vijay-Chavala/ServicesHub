@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>#ServicesHub#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="jquery.multiselect.css">
+    <link rel="stylesheet" href="./css/style1.css">
+    <style>
+
+        .step1-content h2
+{
+    border-bottom: 3px solid #00eec0 !important;
+    
+}
+        
+        /*subcategories checkbox*/
+        
+input[type="radio"], input[type="checkbox"]
+{
+    opacity: 0;
+    display: inline-block;
+    margin-left:3.5px;
+    z-index: 1
+    
+}
+input[type="checkbox"], .dropdown-menu input[type="radio"], .dropdown-menu li label::before, .form-check input[type="checkbox"], .form-check .form-check-label::before
+{  
+    content: "";
+    cursor: pointer;
+    height: 30px;
+    left: 0;
+    margin-top: -15px;
+    position: absolute;
+    width: 30px;
+    top: 50%;
+    border: 1px solid #ccc;
+    border-radius: 4px
+}
+.subcategories ul :hover
+{
+background-color:#00eec0;
+    cursor: pointer;
+}
+
+li input[type="checkbox"]:checked +label::before, .form-check input[type="checkbox"]:checked +.form-check-label::before
+{
+    border: 1px solid #ccc;
+    content: '\2713';
+    color: #39a77b;
+    position: absolute;
+    line-height: 10px;
+
+}
+.dropdown-menu li label::before, .form-check .form-check-label::before
+{
+    color: #fff;
+    font-size: 2.0em;
+    padding: 0 0 0 .2em;
+}
+.form-check label
+{
+    margin-left: 15px;
+    display: block;   
+    width: 80%;
+    word-wrap: break-word;
+    border-right: 1px solid #ddd
+}
+.greenbgcolor
+{
+background-color:#00eec0
+}
+
+.form-check span
+{
+    margin-top: -24px;
+    width: 15%;
+    line-height: 24px;
+    padding-left: 10px;
+
+}
+@media screen and (max-width:600px)
+{
+  
+.step1-content h2
+{
+    border-bottom: 3px solid #00eec0 !important;
+    font-size: 25px    
+}
+    .ms-options-wrap > button:focus, .ms-options-wrap > button
+    {
+        margin-top: 30px;
+    }
+
+ .map-icon
+    {
+        width: 130px !important
+    }
+.ms-options-wrap > .ms-options
+    {
+        font-size: 15px
+    }
+    .ms-options-wrap > button:focus, .ms-options-wrap > button
+    {
+    font-size: 15px !important;
+    }
+
+   .ms-options-wrap > .ms-options > ul input[type="checkbox"]
+    {
+        top: 9px
+    }
+    .modal-content .btn-gradient,.modal-content .btn-gradient-dark
+    {
+        padding: 5px 15px !important;
+        margin-top: 10px !important;
+        margin-right: 10%!important
+    }
+.para p
+{
+    position: absolute;
+    bottom: -10px !important;
+    width: 300px !important;
+    text-align: center;
+    left: 10% !important
+}  
+#selectAreaModal .close 
+    {
+        
+    
+    padding-top: 28px !important
+    }
+#selectAreaModal .close span
+{
+    font-size: 30px !important;
+    padding-top: 500px !important
+}
+}
+.para p
+{
+    position: absolute;
+    bottom: 20px;
+    width: 300px !important
+}
+#selectAreaModal .close span
+{
+    font-size: 45px
+}
+
+.selectArea
+{
+    padding: 7px;
+    width: 89.5%;
+    font-size: 20px;
+    border: 2px solid  #cccc;
+    border-radius: 5px;
+}
+
+    
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-header navbar-expand-lg navbar-dark bg-dark nav-bgcolor">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="dblue">Services</span>Hub</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">LOGIN/SIGN UP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-color" href="#">BECOME A PROFESSIONAL</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header border-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-5 pb-5">
+                    <div class="container">
+                        <h5 class="modal-title">LOG IN</h5>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <form class=" border-right pr-4">
+                                    <div class="form-group mb-0">
+                                        <label for="recipient-name" class="col-form-label">E-mail or username:</label>
+                                        <input type="text" class="form-control h-25" id="user-name">
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <label for="message-text" class="col-form-label">Password:</label>
+                                        <div class="input-group">
+
+                                            <input type="password" class=" form-control h-25 border-right-0" id="password">
+                                            <div class="input-group-append">
+                                                <div class="input-group-text bg-white border-left-0 " id="eye-icon">
+                                                    <span class="fas fa-eye-slash" id="eye"></span> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right pt-1">
+                                        <small><a href="#" class="password-req">I forgot my password </a></small>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox">
+                                        I Forget my password
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Log In" class="btn btn-gradient w-100 mt-4 btn-hover-black">
+                                    </div>
+
+                                </form>
+                                <div class="text-center pt-2"><small>Do not have an account yet? <a href="./signUp/signup.html">Sign Up</a></small></div>
+
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 social mt-4">
+                                <h6>Other Alternatives:</h6>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text fb">
+                                            <i class="fab fa-facebook-f mx-1"></i>
+                                        </div>
+                                    </div>
+                                    <input type="button" class="form-control facebook-btn " value="Log in with your account">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text google">
+                                            <!--<i class="fab fa-google"></i>-->
+                                            <img src="./img1/google_g_logo.png" class="img-fluid" width="20px" height="20px" alt="">
+                                        </div>
+                                    </div>
+                                    <input type="button" class="form-control google-btn" value="Log in with Google">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="password-sec d-none col-lg-8 col-md-12 col-sm-12 mx-auto mt-5">
+                            <div class="content">
+                                <p>Enter an email address to which to send your username and instructions to make the password change.</p>
+                                <div class="form-group mb-0">
+                                    <label for="recipient-name" class="col-form-label">E-mail or username:</label>
+                                    <input type="text" class="form-control h-25" id="user-name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Log In" class="btn btn-gradient w-100 mt-4 btn-hover-black">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="banner">
+        <div class="banner-content text-center">
+
+            <h1>Your Service Expert In Kakinada</h1>
+            <p>Get instant access to reliable and affordable services</p>
+            <form action="" class="form-inline justify-content-center banner-form">
+
+                <div class="form-group ">
+                    <span class="input-group-btn menu-icon">
+                        <select class="select btn btn-bg-white">
+                            <option value="">Select Service</option>
+                            <option value="Kakinada">Kakinada</option>
+                            <option value="Vishakapatnam">Vishakapatnam</option>
+                            <option value="Rajahmundry">Rajahmundry</option>
+                            <option value="Vijaywada">Vijaywada</option>
+                            <option value="Guntur">Guntur</option>
+                            <option value="Amaravathi">Amaravathi</option>
+                            <option value="Thirupathi">Thirupathi</option>
+                            <option value="Nellore">Nellore</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="form-group text-box">
+                    <input type="text" class="form-control input-group-lg text-box">
+                </div>
+                <div class="form-group btn btn-bg-white form-group-btn">
+                    <button class=" btn-gradient btn banner-btn">Select Service
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+
+    <!--services section-->
+    <section class="services">
+
+        <div class="container ">
+            <div class="row text-center ">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="service-info">
+                        <img src="img1/beauty.png" alt="">
+                        <p class="pt-2">Beauty & Spa</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="service-info">
+                        <img src="img1/business.png" alt="">
+                        <p class="pt-2">Business</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="service-info">
+                        <img src="img1/cleaning.png" alt="">
+                        <p class="pt-2">Cleaning</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="service-info">
+                        <img src="img1/library.png" alt="">
+                        <p class="pt-2">Health & Wellness</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="service-info">
+                        <img src="img1/personnal.png" alt="">
+                        <p class="pt-2">Personal & More</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2 mx-auto">
+                    <div class="service-info">
+                        <img src="img1/wedding.png" alt="">
+                        <p class="pt-2">Wedding & Events</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--multiple image sliders-->
+
+    <!--select area pop up modal-->
+
+
+    <div class="modal fade overflow-auto" id="selectAreaModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="container pt-3">
+                        <div class="progress" style="height: 27px">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:25%; background-color:#00eec0">
+
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="container pt-3">
+                    <div class="row">
+
+                        <div class="col-md-12 col-lg-5 col-sm-12 text-center">
+                            <img src="map-icon.png" alt="map" class="img-fluid map-icon">
+
+                        </div>
+                        <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+                            <div class="step1-content">
+                                <h2 class="border-bottom d-inline pb-2">Step 1</h2>
+                                <select class="selectArea" name="langOpt[]" multiple id="langOpt">
+                                    <option value="Balaji Cheruvu">Balaji Cheruvu</option>
+                                    <option value="Beach Road">Beach Road</option>
+                                    <option value="Bhanugudi Junction">Bhanugudi Junction</option>
+                                    <option value="Bhaskar Nagar">Bhaskar Nagar</option>
+                                    <option value="Big Market Street">Big Market Street</option>
+                                    <option value="Cheediga">Cheediga</option>
+                                    <option value="Cinema Hall Road">Cinema Hall Road</option>
+                                    <option value="Gandhi Nagar">Gandhi Nagar</option>
+                                    <option value="Government Hospital">Government Hospital</option>
+                                </select>
+                                <button class="btn btn-gradient float-right mr-5 mt-5 px-5">Next</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="pl-5 pb-3 col-md-12 para">
+                        <p><small>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elitconsectetLoremt. </small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end of select area pop up-->
+
+
+
+
+
+
+        <!-- recommended services subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="recommended-services-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="salon-at-home">
+                                                    <label class="form-check-label" for="salon-at-home">Salon at Home for Women</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="ac-repair-service">
+                                                    <label class="form-check-label" for="ac-repair-service">AC Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="home-deep-cleaning">
+                                                    <label class="form-check-label" for="home-deep-cleaning">Home Deep Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="ca-recom">
+                                                    <label class="form-check-label" for="ca-recom">Chartered Accountant</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="pest-control">
+                                                    <label class="form-check-label" for="pest-control">Pest-Control</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="car-wash">
+                                                    <label class="form-check-label" for="car-wash">Car Wash Service</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of recommended services subcategories-->
+
+        
+
+
+    <!--Recommended Services-->
+    <section class="categories">
+
+        <div class="category-1" id="category-1">
+            <div class="container mt-4 ">
+                <div class="row">
+                    <h5 class="pb-2" data-toggle="modal" data-target="#recommended-services-subcategories">Recommended Services</h5>
+                    <div class="carousel carousel-1 owl-carousel owl-theme">
+
+                        <div class="item active" id="hide">
+                            <a href="#category-1"><img src="img1/salon-at-home.jpg" alt="">
+                                <p>Salon at Home for Women</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/AC.jpg" alt="">
+                                <p>AC Repair</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/floor_cleaning3.jpg" alt="">
+                                <p>Home Deep Cleaning</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/chartered-accountant-insurance.jpg" alt="">
+                                <p>Chartered Accountant</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/pest_control.jpg" alt="">
+                                <p>Pest Control</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/kitchen_deep_cleaning.jpg" alt="">
+                                <p>Kitchen Deep Cleaning</p>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/home-car-wash-2.jpg" alt="">
+                                <p>Car Wash Service</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item left l1"><img src="img1/Rounded_shift_left_arrow.png" alt=""></div>
+                            <div class="owl-item right r1"><img src="img1/circled-chevron-right.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="category-2">
+            <div class="container mt-2">
+                <div class="row">
+                    <h5 class="pb-2" data-toggle="modal" data-target="#appliance-subcategories">Appliance Repair</h5>
+                    <div class="carousel carousel-2 owl-carousel owl-theme">
+
+                        <div class="item active" id="hide">
+                            <a href="#"><img src="img1/washing_machine_repair2.jpg" alt="">
+                                <p>Washing Machine Repair</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/Fridge-Repair2.jpg" alt="">
+                                <p>Refrigerator Repair</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/ro%20repair%20work.jpg" alt="">
+                                <p>RO or Water Purifier Repair</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/microwave-repair-services.jpg" alt="">
+                                <p>Microwave Repair</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/laptop%20repair.jpg" alt="">
+                                <p>Laptop Repair</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item left left-2"><img src="img1/Rounded_shift_left_arrow.png" alt=""></div>
+                            <div class="owl-item right right-2"><img src="img1/circled-chevron-right.png" alt=""></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--appliance repair subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="appliance-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step 3</h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="washing-machine">
+                                                    <label class="form-check-label" for="washing-machine">Washing Machine Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="ac-repair">
+                                                    <label class="form-check-label" for="ac-repair">AC Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="refrig">
+                                                    <label class="form-check-label" for="refrig">Refrigerator Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                              
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="micro-wave-repair">
+                                                    <label class="form-check-label" for="micro-wave-repair">Micro Wave Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="laptop-repair">
+                                                    <label class="form-check-label" for="laptop-repair">Laptop Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+</div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of appliance repair subcategories-->
+
+
+
+        <!-- Home cleaning subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="homecleaning-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="sofacleaning">
+                                                    <label class="form-check-label" for="sofacleaning">Sofa Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="bathroomcleaning">
+                                                    <label class="form-check-label" for="bathroomcleaning">Bathroom Deep Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="homedeepcleaning">
+                                                    <label class="form-check-label" for="homedeepcleaning">Home Deep Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="kitchencleaning">
+                                                    <label class="form-check-label" for="kitchencleaning">Kitchen Deep Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="carpetcleaning">
+                                                    <label class="form-check-label" for="carpetcleaning">Carpet Cleaning</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="laptopRepair">
+                                                    <label class="form-check-label" for="laptopRepair">Laptop Repair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of home cleaning subcategories-->
+
+
+
+
+
+
+
+
+
+
+        <div class="category-3">
+            <div class="container mt-2 ">
+                <div class="row">
+                    <h5 class="pb-2" data-toggle="modal" data-target="#homecleaning-subcategories">Home Cleaning</h5>
+                    <div class="carousel carousel-3 owl-carousel owl-theme">
+
+                        <div class="item active" id="hide">
+                            <a href="#"><img src="img1/sofa_cleaning.jpg" alt="">
+                                <p>Sofa Cleaning</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/bathroom_deep_cleaningh.jpg" alt="">
+                                <p>Bathroom Deep Cleaning</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/floor_cleaning3.jpg" alt="">
+                                <p>Home Deep Cleaning</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/kitchen_deep_cleaning.jpg" alt="">
+                                <p>Kitchen Deep Cleaning</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/Carpet%20cleaning.jpg" alt="">
+                                <p>Carpet Cleaning</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item left left-3"><img src="img1/Rounded_shift_left_arrow.png" alt=""></div>
+                            <div class="owl-item right right-3"><img src="img1/circled-chevron-right.png" alt=""></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- shiftinghomes cleaning subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="shifting-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="packers-movers">
+                                                    <label class="form-check-label" for="packers-movers">Packers & Movers</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="house-painting">
+                                                    <label class="form-check-label" for="house-painting">House Painters</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="pest-control1">
+                                                    <label class="form-check-label" for="pest-control1">Pest Control</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="electrician">
+                                                    <label class="form-check-label" for="electrician">Electrician</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="carpenter">
+                                                    <label class="form-check-label" for="carpenter">Carpenter</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of shifting homes subcategories-->
+
+        
+        
+        
+        <div class="category-4">
+            <div class="container mt-2">
+                <div class="row">
+                    <h5 class="pb-2" data-toggle="modal" data-target="#shifting-subcategories">Shifting Homes</h5>
+                    <div class="carousel carousel-4 owl-carousel owl-theme">
+
+                        <div class="item active" id="hide">
+                            <a href="#"><img src="img1/packers&movers.jpg" alt="">
+                                <p>Packers & Movers</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/wall_painter1.jpg" alt="">
+                                <p>House Painters</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/pest_control.jpg" alt="">
+                                <p>Pest Control</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/Electrician.jpg" alt="">
+                                <p>Electrician</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/plumber.jpg" alt="">
+                                <p>Plumber</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/Carpenter_with_tools.jpg" alt="">
+                                <p>Carpenter</p>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item left left-4"><img src="img1/Rounded_shift_left_arrow.png" alt=""></div>
+                            <div class="owl-item right right-4"><img src="img1/circled-chevron-right.png" alt=""></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- wedding subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="wedding-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="party-makeup">
+                                                    <label class="form-check-label" for="party-makeup">Party Makeup & Hair</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="mehendi-artists">
+                                                    <label class="form-check-label" for="mehendi-artists">Mehendi Arists</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="wedding-photographer">
+                                                    <label class="form-check-label" for="wedding-photographer">Wedding Photographer</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="pre-wedd-shoot">
+                                                    <label class="form-check-label" for="pre-wedd-shoot">Pre Wedding Shoot</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="wedding-venue">
+                                                    <label class="form-check-label" for="wedding-venue">Wedding Venue</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="wedding-catering">
+                                                    <label class="form-check-label" for="wedding-catering">Wedding Catering</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of wedding services subcategories-->
+
+        
+        
+        <div class="category-5">
+            <div class="container mt-2">
+                <div class="row">
+                    <h5 class="pb-2" data-toggle="modal" data-target="#wedding-subcategories">Wedding Services</h5>
+                    <div class="carousel carousel-5 owl-carousel owl-theme">
+
+                        <div class="item active" id="hide">
+                            <a href="#"><img src="img1/hairstyle_makeup.jpg" alt="">
+                                <p>Party Makeup & Hair</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/mehendi.jpg" alt="">
+                                <p>Mehendi Artists</p>
+                            </a>
+                        </div>
+
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/wedding_photographers.jpg" alt="">
+                                <p>Wedding Photographer</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/wedding-photography.jpg" alt="">
+                                <p>Pre-Wedding Shoot</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/wedding%20Venue.jpg" alt="">
+                                <p>Wedding Venue</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/wedding_cataring.jpg" alt="">
+                                <p>Wedding Catering</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item left left-5"><img src="img1/Rounded_shift_left_arrow.png" alt=""></div>
+                            <div class="owl-item right right-5"><img src="img1/circled-chevron-right.png" alt=""></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- Business  subcategories-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="business-subcategories" tabindex="-1" role="dialog" aria-labelledby="appliance-subcategories" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <div class="container pt-3">
+                            <div class="progress" style="height: 27px">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%; background-color:#00eec0">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-5 col-sm-12 text-left pl-5">
+                                <div class="step1-content">
+                                    <h2 class="border-bottom d-inline pb-2">Step </h2>
+                                    <h5 class="pt-4">Need a Technician for</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-lg-7 col-sm-12 pt-5 pb-5">
+
+                                <div class="form-group ">
+                                    <div class=" d-block pr-5 subcategories">
+
+                                        <ul class="list-unstyled border  ">
+                                            <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="chartered-accountant">
+                                                    <label class="form-check-label" for="chartered-accountant">Chartered Accountant</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="web-developer">
+                                                    <label class="form-check-label" for="web-developer">Web Developer</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+                                                <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="tax-filing">
+                                                    <label class="form-check-label" for="tax-filing">CA for Income Tax Filing</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        <li class="p-2 border-bottom">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="banking">
+                                                    <label class="form-check-label" for="banking">Banking</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                         <li class="p-2 border-bottom ">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="cctv-installation">
+                                                    <label class="form-check-label" for="cctv-installation">CCTV Cameras and Installation</label>
+                                                    <span class="price float-right pr-4">655</span>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+
+                                  </div>
+                                 <div class="d-flex justify-content-between">
+                                 <button class="btn btn-gradient-dark  px-4">Back</button>
+                                  <button class="btn btn-gradient mr-5 px-4">Next</button>                             
+                                    </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--End of wedding services subcategories-->
+
+        
+        <div class="category-6">
+            <div class="container mt-2">
+                <div class="row">
+                    <h5 class="pb-2" data-toggle="modal" data-target="#business-subcategories">Help for Your Business</h5>
+                    <div class="carousel carousel-6 owl-carousel owl-theme">
+
+                        <div class="item active" id="hide">
+                            <a href="#"><img src="img1/chartered-accountant-insurance.jpg" alt="">
+                                <p>Chartered Accountant</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/web-developer.jpg" alt="">
+                                <p>Web developer</p>
+                            </a>
+                        </div>
+
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/ca_IT_filing.jpg" alt="">
+                                <p>CA for Income Tax Filing</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/banking.jpg" alt="">
+                                <p>Banking</p>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#">
+                                <img src="img1/CCTV-Installation.jpg" alt="">
+                                <p>CCTV Cameras and Installation</p>
+                            </a>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <div class="owl-item left left-6"><img src="img1/Rounded_shift_left_arrow.png" alt=""></div>
+                            <div class="owl-item right right-6"><img src="img1/circled-chevron-right.png" alt=""></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="rennovating_planning pt-3 pb-2">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <div class="content pb-3 mb-3">
+                        <a href="#">
+                            <div class="img-grp">
+                                <img src="img1/renovation-image2.jpg" alt="" class="img-fluid img1" id="animation-left-1">
+                                <img src="img1/renovation-image1.jpg" alt="" class="img-fluid img2" id="animation-right-1">
+                                <img src="img1/renovation-image.jpg" alt="" class="img-fluid img3">
+                            </div>
+
+                            <h3 class="py-1">Renovating Your Home?</h3>
+                            <p class="px-5">Get inspiration ideas from 1000+ projects on home renovation and design</p>
+                        </a>
+
+                        <a href="#" class="btn btn-gradient browse-ideas-btn">BROWSE IDEAS</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="content pb-3">
+                        <a href="#">
+                            <div class="img-grp2">
+                                <img src="img1/wedding-couple-6-1.jpg" alt="" class="img-fluid img1 rounded-circle" id="animation-left-2">
+                                <img src="img1/wedding-pic2.jpg" alt="" class="img-fluid img2  rounded-circle" id="animation-right-2">
+                                <img src="img1/wedd.jpg" alt="" class="img-fluid img3 rounded-circle">
+                            </div>
+
+                            <h3 class="py-1">Planning a Wedding?</h3>
+                            <p class="px-5">Get inspiration ideas from 1000+ projects on home renovation and design</p>
+
+                        </a>
+
+                        <a href="#" class="btn btn-gradient browse-ideas-btn">BROWSE IDEAS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials py-3 ">
+
+        <div class="container text-center">
+
+            <h2>Satisfied Customers Testimonials & Referrals</h2>
+            <p class="caption">Lorem ipsum dolor sit amet, consectetur adi Labore e Labore expedimus veipsum dolor<br> sit amet, consectetur adi sit amet, consectetur adie expedimus veniam.</p>
+            <div class="row mx-auto py-3">
+                <div class="carousel-reviews owl-carousel owl-theme">
+                    <div class="item active">
+                        <div class="customer-info text-center">
+                            <img src="img1/user1.jpg" class="img-fluid rounded-circle w-50 mx-auto" alt="">
+                            <p class="font-italic py-2 m-0">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ficia asperiores quam inventore ad ab, sapiente voluptas soluta nesciunt."</p>
+                            <h6 class="text-danger">Adam Smith</h6>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="customer-info text-center">
+                            <img src="img1/user2r.jpg" class="img-fluid rounded-circle  w-50  mx-auto" alt="">
+                            <p class="font-italic  py-2 m-0">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ficia asperiores quam inventore ad ab, sapiente voluptas soluta nesciunt."</p>
+                            <h6 class="text-secondary">Cristy</h6>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="customer-info text-center">
+                            <img src="img1/user3.jpg" class="img-fluid rounded-circle  w-50  mx-auto" alt="">
+                            <p class="font-italic  py-2 m-0">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ficia asperiores quam inventore ad ab, sapiente voluptas soluta nesciunt."</p>
+                            <h6 class="text-primary">James Jackson</h6>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="customer-info text-center">
+                            <img src="img1/user2r.jpg" class="img-fluid rounded-circle  w-50  mx-auto" alt="">
+                            <p class="font-italic  py-2 m-0">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ficia asperiores quam inventore ad ab, sapiente voluptas soluta nesciunt."</p>
+                            <h6 class="text-secondary">Cristy</h6>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="customer-info text-center">
+                            <img src="img1/user3.jpg" class="img-fluid rounded-circle  w-50  mx-auto" alt="">
+                            <p class="font-italic  py-2 m-0">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ficia asperiores quam inventore ad ab, sapiente voluptas soluta nesciunt."</p>
+                            <h6 class="text-primary">James Jackson</h6>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="customer-info text-center">
+                            <img src="img1/user2r.jpg" class="img-fluid rounded-circle  w-50  mx-auto" alt="">
+                            <p class="font-italic  py-2 m-0">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ficia asperiores quam inventore ad ab, sapiente voluptas soluta nesciunt."</p>
+                            <h6 class="text-secondary">Cristy</h6>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="customer-info text-center">
+                            <img src="img1/user3.jpg" class="img-fluid rounded-circle  w-50  mx-auto" alt="">
+                            <p class="font-italic  py-2 m-0">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. At ficia asperiores quam inventore ad ab, sapiente voluptas soluta nesciunt."</p>
+                            <h6 class="text-primary">James Jackson</h6>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="otherCategories pt-3">
+
+        <div class="container">
+            <h2>Other Categories In Kakinada</h2>
+            <div class="row pt-3">
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Free Water Purifier Check-Up</a></li>
+                        <li><a href="#">Science Tutor</a></li>
+                        <li><a href="#">Bathroom Renovation</a></li>
+                        <li><a href="#">Home Cleaning Services</a></li>
+                        <li><a href="#">Salon Spa Subscription</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Yoga at Studio</a></li>
+                        <li><a href="#">Logo Designers</a></li>
+                        <li><a href="#">GST Registration & Migration Services</a></li>
+                        <li><a href="#">Relocation Service</a></li>
+                        <li><a href="#">Salon at Home for Women</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Wedding Dresses</a></li>
+                        <li><a href="#">Office Deep Cleaning</a></li>
+                        <li><a href="#">Appliance Repair</a></li>
+                        <li><a href="#">Chartered Accountant</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <hr>
+
+    <section class="expand-service pt-3">
+        <div class="container text-center">
+            <h2>Expand Your Service Business With ServicesHub</h2>
+            <p>Join a community of 75,000+ professionals who have successfully grown their business with ServicesHub
+
+            </p>
+            <div class="row pt-3">
+                <div class="col-md-4 col-sm-12 col-lg-4 ">
+                    <div class="card pt-4 mb-2">
+                        <div class="card-img-top">
+                            <img src="img1/best-photographer.jpg" class="rounded-circle img-thumbnail img-fluid" alt="">
+                        </div>
+                        <div class="card-body  py-2">
+                            <h5>Vivek</h5>
+                            <h6 class="dblue">Wedding Photographer</h6>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias natus ab nemo, ipsum quos labore.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 col-sm-12 col-lg-4">
+                    <div class="card pt-4 mb-2">
+                        <div class="card-img-top">
+                            <img src="img1/r2.jpg" class="rounded-circle img-thumbnail img-fluid" alt="">
+                        </div>
+                        <div class="card-body  py-2">
+                            <h5>Dhanush</h5>
+                            <h6 class="dblue">Packers & Movers</h6>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias natus ab nemo, ipsum quos labore.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 col-sm-12 col-lg-4">
+                    <div class="card pt-4 mb-2">
+                        <div class="card-img-top">
+                            <img src="img1/r1.png" class="rounded-circle img-thumbnail img-fluid" alt="">
+                        </div>
+                        <div class="card-body  py-2">
+                            <h5>Prasidh</h5>
+                            <h6 class="dblue">Charted Accountant</h6>
+                            <hr>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias natus ab nemo, ipsum quos labore.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="app py-3">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 pt-4">
+                    <img src="img1/mockup.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 col-md-6  my-auto">
+                    <h2>Download The App</h2>
+                    <p><small>Choose and book from 100+ services and track them on the go with the ServicesHub App</small></p>
+                    <form action="" class="form-inline app-form">
+                        <input type="email" placeholder="Your Mail" class="form-control form-control-lg email">
+                        <button type="submit" class="btn btn-gradient form-control btn-hover-black">Text App Link</button>
+                    </form>
+                    <div class="download-btns mt-3">
+                        <button type="submit" class="btn btn-success"><span class="fab fa-android fa-lg" aria-hidden="true"></span> DOWNLOAD <br><small>ANDROID VERSION 1.4</small></button>
+                        <button type="submit" class="btn btn-primary"><span class="fab fa-apple fa-lg" aria-hidden="true"></span> DOWNLOAD <br> <small>IOS VERSION 1.4</small></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="join-now py-3">
+        <div class="container">
+            <div class="card text-center d-block py-4 justify-content-between align-items-center">
+                <h5 class="card-text d-inline-block col-md-8 col-sm-12">Are You A Professional Looking To Grow Your Service Business?</h5>
+                <button type="submit" class="btn btn-gradient btn-hover-black btn-lg ">Join Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features border border-left-0 border-right-0">
+        <div class="container">
+
+            <div class="row  ">
+                <div class="col-md-4 py-4">
+                    <div class="d-flex justify-content-between feature-info">
+                        <div class="my-auto"><img src="img1/quality.png" alt=""></div>
+                        <div class="pl-3">
+                            <h6>High Quality & Trusted Professionals</h6>
+                            <p>We provide only verified, background checked and high quality professionals</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 border border-top-0 border-bottom-0  py-4">
+                    <div class="d-flex justify-content-between feature-info">
+                        <div class="my-auto"><img src="img1/matched.png" alt=""></div>
+                        <div class="pl-3">
+                            <h6>Matched To Your Needs</h6>
+                            <p>We match you with the right professionals with the right budget</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 py-4">
+                    <div class="d-flex justify-content-between feature-info">
+                        <div class="my-auto"><img src="img1/hassle-free.png" alt=""></div>
+                        <div class="pl-3">
+                            <h6>Hassle Free Service Delivery
+                                s</h6>
+                            <p>Super convenient, guaranteed service from booking to delivery</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <section class="counterup">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="stats-items">
+                        <h1><span class="counter text-center">150</span></h1>
+                        <p>LIVE SERVICES</p>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-items">
+                        <h1><span class="counter text-center">120</span></h1>
+                        <p>CUSTOMERS SERVED</p>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-items">
+                        <h1><span class="counter text-center">140</span></h1>
+                        <p>VERIFIED EXPERTS</p>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="stats-items">
+                        <h1><span class="counter text-center">130</span></h1>
+                        <p>AVERGAE RATING</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="useful-links pt-3">
+
+        <div class="container">
+            <div class="row">
+                <ul class="list-inline main-links ">
+                    <li class="list-inline-item"><a href="#" class="active-link">About</a></li>
+                    <li class="list-inline-item"><a href="#">Services Hub Blog</a></li>
+                    <li class="list-inline-item"><a href="#">Weddings</a></li>
+                    <li class="list-inline-item"><a href="#">Homes</a></li>
+                    <li class="list-inline-item"><a href="#">Careers</a></li>
+                    <li class="list-inline-item"><a href="#">Join As A Professional</a></li>
+                    <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li class="font-weight">COMPANY</li>
+                        <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Coupon</a></li>
+                        <li><a href="#">Blacklisted Professionals</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li class="font-weight">SERVING IN</li>
+                        <li><a href="#">Vishakhapatnam</a></li>
+                        <li><a href="#">Kakinada</a></li>
+                        <li><a href="#">Rajahmundry</a></li>
+                        <li><a href="#">Vijaywada</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+
+                        <li><a href="#">Guntur</a></li>
+                        <li><a href="#">Amaravathi</a></li>
+                        <li><a href="#">Tirupathi</a></li>
+                        <li><a href="#">Nellore</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="list-unstyled pt-">
+
+                        <li><a href="#">Eluru</a></li>
+                        <li><a href="#">Bhimavaram</a></li>
+                        <li><a href="#">Vijayanagaram</a></li>
+                        <li><a href="#">Bhubhaneswar</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <footer class="pt-4 pb-2 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        Copyright © 2018. All Rights Reserved by <a href="#">Services Hub</a></p>
+                </div>
+                <div class="col-md-6 sec-2">
+                    <p><a href="#">Terms and Conditions</a></p>
+                    <p><a href="#">Policy</a></p>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-pinterest-p"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="jquery.multiselect.js"></script>
+    <script src="js/jquery.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 1000
+            });
+
+
+            $('#eye-icon').hover(function() {
+                $('#eye').toggleClass("fa-eye-slash fa-eye");
+
+                var pass = $('#password');
+                if (pass.attr('type') === "password") {
+                    pass.attr('type', 'text');
+                } else {
+
+                    pass.attr('type', 'password');
+                }
+
+            });
+
+            $('.password-req').click(function() {
+                $('.password-sec').toggleClass('show');
+            });
+
+        });
+
+        /*adding attributes for carousel images*/
+        $(document).ready(function() {
+
+            $(".carousel .item").click(function() {
+
+                $(this).attr('data-target', '#selectAreaModal');
+
+                $(this).attr('data-toggle', "modal");
+
+                $(".carousel .item a").attr("href", "javascript:void(0)")
+     });
+                    /*subcategories bgcolor when selected*/
+                $(".subcategories ul li").change(function(){
+                    
+                    $(this).toggleClass('greenbgcolor');
+
+
+                });
+
+
+                   
+            
+            
+            
+            /*multi select*/
+            $('#langOpt').multiselect({
+                columns: 1,
+                placeholder: 'Select Area',
+                search: 'true',
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
